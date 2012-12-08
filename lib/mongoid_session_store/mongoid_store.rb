@@ -31,6 +31,10 @@ module ActionDispatch
 
         def set_session(env, sid, session_data, options = nil)
           record = get_session_model(env, sid)
+          
+          #add session id to session hash
+          session_data.merge!("session_id" => sid)
+          
           record.data = pack(session_data)
 
           # Rack spec dictates that set_session should return true or false
