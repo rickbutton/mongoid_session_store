@@ -2,6 +2,12 @@
 
 store rails 3 sessions in mongoDB using mongoid.
 
+== WARNING
+This gem currently fails tests for rails. I think it is a regression in the way rails handles
+sending cookies back to the client, but it is essentially harmless. I use this in production
+with no problems, but as usual, USE AT YOUR OWN RISK. I am not liable if your shit breaks, your
+servers catch fire, or your wife divorces you.
+
 == Installation
 This gem supports rails 3, rails 3.1 and mongoid 3.0
 
